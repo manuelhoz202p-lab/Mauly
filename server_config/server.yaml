@@ -1,0 +1,22 @@
+listen: :443
+
+tls:
+  cert: /etc/hysteria/server.crt
+  key: /etc/hysteria/server.key
+
+auth:
+  type: command
+  command:
+    name: /etc/hysteria/auth_script.sh
+    # Hysteria pasará automáticamente los argumentos: addr, auth, tx
+
+udp:
+  mtu: 1350
+
+# Opcional: Configuración de ancho de banda
+# bandwidth:
+#   up: 100 mbps
+#   down: 100 mbps
+
+# Opcional: Ignorar errores de resolución de nombres
+# ignore_client_bandwidth: true
